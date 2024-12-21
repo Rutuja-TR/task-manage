@@ -1,0 +1,41 @@
+<div style="padding: 10px;">
+    <div>
+        <select style="    width: 12%;
+        height: 35px;    margin-bottom: -41px;" [(ngModel)]="filterStatus" (change)="applyFilter()">
+            <option value="">All</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+    </div>
+    <button style="    width: 10%;
+    margin-left: 89%;
+    border-radius: 1%;
+    background-color: #85c3ed;" mat-raised-button (click)="openAddEditTaskDialog()">Add Task</button>
+
+    <mat-table [dataSource]="filteredTasks">
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+            <mat-cell *matCellDef="let task">{{ task.title }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="status">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let task">{{ task.status }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="priority">
+            <mat-header-cell *matHeaderCellDef> Priority </mat-header-cell>
+            <mat-cell *matCellDef="let task">{{ task.priority }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+            <mat-cell *matCellDef="let task">
+                <button mat-button (click)="openAddEditTaskDialog(task)">Edit</button>
+                <button mat-button (click)="deleteTask(task)">Delete</button>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

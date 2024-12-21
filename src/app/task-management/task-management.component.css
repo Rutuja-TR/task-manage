@@ -1,0 +1,34 @@
+
+
+/* Container for the task list */
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Add Task button */
+  button.mat-raised-button {
+    align-self: flex-start;
+  }
+  
+  /* Dropdown filter for status */
+  mat-select {
+    max-width: 200px;
+  }
+  
+  /* Add some spacing for the table */
+  mat-table {
+    margin-top: 20px;
+  }
+  
+  /* Hover effect on table rows */
+  mat-row:hover {
+    background-color: #eeeeee;
+  }
+  
+  /* Make sure buttons in the table are aligned */
+  button.mat-button {
+    margin-right: 8px;
+  }
+  

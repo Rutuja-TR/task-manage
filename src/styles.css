@@ -1,0 +1,118 @@
+/* Global Styles (styles.css) */
+
+/* Apply a simple CSS reset for consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: 'Roboto', sans-serif; /* Use a clean font for Material Design */
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+  }
+  
+  /* Make the body and app container fill the full height of the screen */
+  body, app-root {
+    height: 100%;
+  }
+  
+  /* Set up spacing for the main content */
+  main {
+    padding: 20px;
+  }
+  
+
+
+  
+  /* Style for the Material Table */
+  mat-table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  mat-table th, mat-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  mat-header-cell {
+    font-weight: bold;
+    background-color: #1976d2;
+    color: rgb(27, 11, 11);
+  }
+  
+  mat-cell {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  mat-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Button Styles */
+  button.mat-raised-button {
+    background-color: #1976d2;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: none;
+  }
+  
+  button.mat-raised-button:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Styling for Form Fields */
+  mat-form-field {
+    /* width: 100%; */
+    margin-bottom: 20px;
+  }
+  
+  /* Select Dropdown and Inputs */
+  mat-select,
+  input.mat-input-element {
+    width: 100%;
+  }
+  
+  mat-select {
+    padding: 8px;
+    background-color: #ffffff;
+  }
+  
+  /* Adjustments for Dialogs */
+  mat-dialog-content {
+    padding: 16px;
+  }
+  
+  mat-dialog-actions {
+    justify-content: flex-end;
+  }
+  
+  mat-dialog-actions button {
+    margin-left: 10px;
+  }
+  
+  /* Adjust styles for mobile responsiveness */
+  @media (max-width: 600px) {
+    main {
+      padding: 10px;
+    }
+  
+    .mat-table {
+      font-size: 14px;
+    }
+  
+    button.mat-raised-button {
+      width: 100%;
+    }
+  
+    mat-form-field {
+      margin-bottom: 12px;
+    }
+  }
+  

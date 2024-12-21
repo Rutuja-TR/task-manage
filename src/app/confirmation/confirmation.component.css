@@ -1,0 +1,49 @@
+
+
+/* Form content in the dialog */
+mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+  
+  /* Make sure form fields are properly spaced */
+  mat-form-field {
+    /* width: 100%; */
+    margin-bottom: 16px;
+  }
+  
+  /* Dialog buttons */
+  mat-dialog-actions {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  button.mat-button {
+    margin-left: 10px;
+    padding: 8px 16px;
+  }
+  
+  ::ng-deep .mat-dialog-container {
+    width: 600px;  /* Set the dialog width to 600px */
+  }
+  
+  .form-field {
+    margin-bottom: 16px;
+  }
+  
+  .form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .form-field input, .form-field select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
